@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>शेतकरी मित्र | शेती माहिती व सेवा केंद्र</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, "Noto Sans Devanagari", sans-serif;
+}
+
+body{
+    background:#f4f8f3;
+    color:#243024;
+    line-height:1.6;
+}
+
+header{
+    background:#176b35;
+    color:white;
+    padding:15px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:15px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.hero{
+    background:linear-gradient(135deg,#176b35,#54a83b);
+    color:white;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:19px;
+    max-width:700px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:white;
+    color:#176b35;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:55px 6%;
+}
+
+.section-title{
+    text-align:center;
+    color:#176b35;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.search-box{
+    max-width:650px;
+    margin:0 auto 35px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px;
+    border:2px solid #b5cbb2;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card .icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    color:#176b35;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:15px;
+}
+
+.info{
+    background:#e8f4e5;
+}
+
+.badge{
+    display:inline-block;
+    background:#d8ecd3;
+    color:#176b35;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:13px;
+    margin-top:10px;
+}
+
+.notice{
+    background:#fff6d8;
+    border-left:5px solid #e1ad20;
+    padding:18px;
+    margin-top:30px;
+    border-radius:8px;
+}
+
+.contact{
+    text-align:center;
+    background:#176b35;
+    color:white;
+}
+
+.contact .section-title{
+    color:white;
+}
+
+.whatsapp{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:13px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+footer{
+    background:#0e4221;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav a{
+        margin:0 6px;
+        font-size:13px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:40px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌾 शेतकरी मित्र</div>
+
+    <nav>
+        <a href="#home">मुख्यपृष्ठ</a>
+        <a href="#tools">अवजारे</a>
+        <a href="#crops">पिके</a>
+        <a href="#medicine">औषध माहिती</a>
+        <a href="#contact">संपर्क</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <h1>🌾 शेतकरी मित्र</h1>
+
+    <p>
+        शेतकऱ्यांसाठी शेतीची अवजारे, विविध पिकांची माहिती,
+        कीड व रोग व्यवस्थापन आणि शेतीविषयक उपयुक्त माहिती
+        एकाच ठिकाणी.
+    </p>
+
+    <a href="#tools" class="btn">माहिती पहा ↓</a>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<section>
+
+    <h2 class="section-title">🔎 शेती माहिती शोधा</h2>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="उदा. कापूस, सोयाबीन, नांगर, फवारणी..."
+            onkeyup="searchCards()">
+    </div>
+
+</section>
+
+
+<!-- TOOLS -->
+
+<section id="tools">
+
+    <h2 class="section-title">🚜 शेतीसाठी लागणारी अवजारे</h2>
+
+    <div class="cards">
+
+        <div class="card searchable">
+            <div class="icon">🚜</div>
+            <h3>ट्रॅक्टर</h3>
+            <p>
+                शेतीची मशागत, नांगरणी, पेरणी, वाहतूक
+                आणि विविध कृषी उपकरणे चालवण्यासाठी उपयोगी.
+            </p>
+            <span class="badge">शेती मशागत</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🌱</div>
+            <h3>नांगर</h3>
+            <p>
+                जमीन नांगरण्यासाठी आणि माती उलटण्यासाठी
+                वापरले जाणारे पारंपरिक तसेच आधुनिक अवजार.
+            </p>
+            <span class="badge">जमीन तयारी</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">⚙️</div>
+            <h3>रोटाव्हेटर</h3>
+            <p>
+                जमिनीतील ढेकळे फोडून जमीन भुसभुशीत
+                करण्यासाठी उपयोगी.
+            </p>
+            <span class="badge">मशागत</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🌾</div>
+            <h3>पेरणी यंत्र</h3>
+            <p>
+                बियाणे योग्य अंतरावर आणि योग्य खोलीवर
+                पेरण्यासाठी वापरले जाते.
+            </p>
+            <span class="badge">पेरणी</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">💦</div>
+            <h3>फवारणी पंप</h3>
+            <p>
+                पिकांवर कीटकनाशक, बुरशीनाशक किंवा
+                इतर कृषी द्रावणांची फवारणी करण्यासाठी.
+            </p>
+            <span class="badge">फवारणी</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🌿</div>
+            <h3>कोळपे</h3>
+            <p>
+                पिकांच्या ओळींमधील तण काढण्यासाठी
+                उपयोगी शेती अवजार.
+            </p>
+            <span class="badge">तण नियंत्रण</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CROPS -->
+
+<section id="crops" class="info">
+
+    <h2 class="section-title">🌱 प्रमुख पिकांची माहिती</h2>
+
+    <div class="cards">
+
+        <div class="card searchable">
+            <div class="icon">🌿</div>
+            <h3>कापूस</h3>
+            <p>
+                कापूस हे महत्त्वाचे नगदी पीक आहे.
+                योग्य जमीन, पाणी व्यवस्थापन आणि कीड नियंत्रण
+                याकडे विशेष लक्ष देणे आवश्यक आहे.
+            </p>
+            <span class="badge">नगदी पीक</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🫘</div>
+            <h3>सोयाबीन</h3>
+            <p>
+                सोयाबीनसाठी चांगला निचरा असलेली जमीन,
+                प्रमाणित बियाणे आणि योग्य पाणी व्यवस्थापन
+                महत्त्वाचे आहे.
+            </p>
+            <span class="badge">खरीप पीक</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🌽</div>
+            <h3>मका</h3>
+            <p>
+                मका हे अन्न, पशुखाद्य आणि औद्योगिक वापरासाठी
+                महत्त्वाचे पीक आहे.
+            </p>
+            <span class="badge">खरीप / रब्बी</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🌾</div>
+            <h3>गहू</h3>
+            <p>
+                गहू हे प्रमुख रब्बी पीक आहे.
+                योग्य वेळी पेरणी, खत आणि पाणी व्यवस्थापन
+                उत्पादनासाठी महत्त्वाचे आहे.
+            </p>
+            <span class="badge">रब्बी पीक</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🌱</div>
+            <h3>हरभरा</h3>
+            <p>
+                हरभरा हे महत्त्वाचे कडधान्य पीक आहे.
+                योग्य जमीन व संतुलित खत व्यवस्थापनामुळे
+                उत्पादन सुधारण्यास मदत होते.
+            </p>
+            <span class="badge">कडधान्य</span>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🧅</div>
+            <h3>कांदा</h3>
+            <p>
+                कांदा पिकासाठी निचरा चांगला असलेली जमीन,
+                नियमित निरीक्षण आणि योग्य पाणी व्यवस्थापन
+                आवश्यक आहे.
+            </p>
+            <span class="badge">भाजीपाला</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MEDICINE / DISEASE -->
+
+<section id="medicine">
+
+    <h2 class="section-title">💊 कीड व रोग व्यवस्थापन माहिती</h2>
+
+    <div class="cards">
+
+        <div class="card searchable">
+            <div class="icon">🐛</div>
+            <h3>पाने खाणाऱ्या अळ्या</h3>
+            <p>
+                पानांवर छिद्रे किंवा पाने खाल्लेली दिसल्यास
+                पिकाची नियमित पाहणी करा. प्रादुर्भाव जास्त असल्यास
+                कृषी तज्ज्ञांचा सल्ला घ्या.
+            </p>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🦟</div>
+            <h3>मावा / Aphids</h3>
+            <p>
+                कोवळ्या पानांवर व फांद्यांवर लहान कीटक दिसू शकतात.
+                सुरुवातीला पिकाचे निरीक्षण आणि योग्य प्रतिबंधात्मक
+                उपाय महत्त्वाचे आहेत.
+            </p>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🍂</div>
+            <h3>बुरशीजन्य रोग</h3>
+            <p>
+                पानांवर डाग, कुज किंवा बुरशीची लक्षणे दिसल्यास
+                रोगाची योग्य ओळख करूनच उपचार करावेत.
+            </p>
+        </div>
+
+        <div class="card searchable">
+            <div class="icon">🌿</div>
+            <h3>तण नियंत्रण</h3>
+            <p>
+                पिकाच्या सुरुवातीच्या अवस्थेत तण नियंत्रण
+                केल्याने पिकाला पाणी, अन्नद्रव्ये आणि सूर्यप्रकाशासाठी
+                स्पर्धा कमी होते.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="notice">
+        <strong>⚠️ महत्त्वाची सूचना:</strong><br>
+        कोणतेही कृषी औषध वापरण्यापूर्वी त्याचे लेबल,
+        पिकाचे नाव, रोग/किडीची योग्य ओळख आणि वापराच्या
+        सूचना तपासा. औषधाची मात्रा स्वतःहून बदलू नका.
+        आवश्यक असल्यास कृषी अधिकारी किंवा तज्ज्ञांचा सल्ला घ्या.
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="info">
+
+    <h2 class="section-title">📋 आमच्या सेवा</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🌾</div>
+            <h3>शेती माहिती</h3>
+            <p>विविध पिकांची लागवड आणि व्यवस्थापनाची माहिती.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚜</div>
+            <h3>अवजारे माहिती</h3>
+            <p>शेतीसाठी आवश्यक उपकरणे आणि त्यांचा उपयोग.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🐛</div>
+            <h3>कीड व रोग माहिती</h3>
+            <p>पिकांवरील सामान्य कीड व रोगांची प्राथमिक माहिती.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📞</div>
+            <h3>मार्गदर्शन</h3>
+            <p>शेतकऱ्यांना योग्य माहिती मिळवण्यासाठी संपर्क सुविधा.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <h2 class="section-title">📞 संपर्क करा</h2>
+
+    <p>
+        शेतीविषयक माहिती किंवा सेवेसाठी आमच्याशी संपर्क करा.
+    </p>
+
+    <!-- तुमचा नंबर येथे बदला -->
+    <a
+        class="whatsapp"
+        href="https://wa.me/91XXXXXXXXXX"
+        target="_blank">
+        💬 WhatsApp वर संपर्क करा
+    </a>
+
+    <p style="margin-top:20px;">
+        📍 गाव: तुमचे गाव<br>
+        📍 तालुका: तुमचा तालुका<br>
+        📍 जिल्हा: तुमचा जिल्हा
+    </p>
+
+</section>
+
+
+<footer>
+
+    © 2026 शेतकरी मित्र | शेती माहिती व सेवा केंद्र
+
+</footer>
+
+
+<script>
+
+function searchCards(){
+
+    let input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    let cards =
+        document.querySelectorAll(".searchable");
+
+    cards.forEach(function(card){
+
+        let text =
+            card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+            card.style.display = "block";
+        }
+        else{
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
