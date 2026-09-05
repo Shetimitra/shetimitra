@@ -4,225 +4,232 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shetimitra | शेतकरी मित्र</title>
+<title>शेती कामगार सेवा केंद्र</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Arial, "Noto Sans Devanagari", sans-serif;
 }
 
 body{
-    font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    background:#f5f8f3;
-    color:#243524;
+    background:#f5f8f4;
+    color:#26332a;
     line-height:1.6;
 }
 
 header{
-    background:#126b35;
+    background:#176b3a;
     color:white;
-    padding:15px 6%;
+    padding:15px 5%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
 .logo{
-    font-size:24px;
+    font-size:22px;
     font-weight:bold;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:18px;
+    margin-left:20px;
     font-size:15px;
 }
 
 nav a:hover{
-    color:#d8ffca;
+    text-decoration:underline;
 }
 
 .hero{
-    min-height:520px;
-    background:
-    linear-gradient(rgba(10,75,30,.70),rgba(10,75,30,.70)),
-    linear-gradient(135deg,#4c9c42,#9bcf65);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+    background:linear-gradient(135deg,#176b3a,#2d914f);
     color:white;
-    padding:40px 20px;
-}
-
-.hero-content{
-    max-width:850px;
+    text-align:center;
+    padding:75px 20px;
 }
 
 .hero h1{
-    font-size:50px;
+    font-size:42px;
     margin-bottom:15px;
 }
 
 .hero p{
-    font-size:20px;
-    margin-bottom:25px;
+    font-size:19px;
+    max-width:750px;
+    margin:auto;
 }
 
-.hero-buttons a{
+.hero-buttons{
+    margin-top:30px;
+}
+
+.btn{
     display:inline-block;
-    padding:13px 25px;
-    margin:5px;
+    padding:12px 22px;
+    margin:6px;
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
+    cursor:pointer;
+    border:none;
 }
 
-.primary{
+.btn-white{
     background:white;
-    color:#126b35;
+    color:#176b3a;
 }
 
-.secondary{
-    border:2px solid white;
+.btn-green{
+    background:#176b3a;
     color:white;
 }
 
 section{
-    padding:60px 6%;
+    padding:55px 6%;
 }
 
-.title{
+.section-title{
     text-align:center;
-    color:#126b35;
-    font-size:32px;
     margin-bottom:35px;
 }
 
-.search{
-    max-width:700px;
-    margin:0 auto 40px;
+.section-title h2{
+    color:#176b3a;
+    font-size:30px;
 }
 
-.search input{
-    width:100%;
-    padding:16px;
-    border:2px solid #c8d9c3;
-    border-radius:12px;
-    font-size:17px;
-    outline:none;
-}
-
-.search input:focus{
-    border-color:#126b35;
+.section-title p{
+    color:#666;
+    margin-top:7px;
 }
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:22px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
 
 .card{
     background:white;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-    transition:.3s;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    transition:.2s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 8px 22px rgba(0,0,0,.12);
+    transform:translateY(-4px);
 }
 
-.card-icon{
-    font-size:48px;
+.icon{
+    font-size:38px;
     margin-bottom:10px;
 }
 
 .card h3{
-    color:#126b35;
-    margin-bottom:10px;
-    font-size:21px;
+    color:#176b3a;
+    margin-bottom:8px;
 }
 
 .card p{
-    color:#555;
+    color:#666;
 }
 
-.badge{
-    display:inline-block;
-    margin-top:15px;
-    padding:5px 12px;
-    border-radius:20px;
-    background:#e3f3dd;
-    color:#126b35;
-    font-size:13px;
-}
-
-.green-section{
-    background:#eaf5e7;
-}
-
-.details{
-    margin-top:15px;
-    padding:12px;
-    background:#f4f8f2;
-    border-radius:8px;
-    font-size:14px;
-}
-
-.details strong{
-    color:#126b35;
-}
-
-.services{
-    text-align:center;
-}
-
-.service-card{
-    text-align:center;
-}
-
-.registration{
-    background:#f0f7ed;
-}
-
-.form{
-    max-width:700px;
-    margin:auto;
+.search-box{
+    max-width:850px;
+    margin:0 auto 30px;
     background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
-.form-group{
-    margin-bottom:18px;
-}
-
-.form label{
-    display:block;
-    margin-bottom:7px;
-    font-weight:bold;
-}
-
+.search-box input,
+.search-box select,
 .form input,
 .form select,
 .form textarea{
     width:100%;
     padding:13px;
-    border:1px solid #ccd8c8;
+    margin:7px 0;
+    border:1px solid #ddd;
     border-radius:8px;
     font-size:15px;
+}
+
+.search-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.worker{
+    position:relative;
+}
+
+.available{
+    display:inline-block;
+    background:#e5f7ea;
+    color:#176b3a;
+    padding:4px 9px;
+    border-radius:20px;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.worker-info{
+    margin:8px 0;
+}
+
+.worker-info span{
+    display:block;
+    margin:3px 0;
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+}
+
+th,td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+    text-align:left;
+}
+
+th{
+    background:#176b3a;
+    color:white;
+}
+
+.form-container{
+    max-width:750px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.form label{
+    font-weight:bold;
+    display:block;
+    margin-top:8px;
 }
 
 .form textarea{
@@ -230,108 +237,87 @@ section{
     resize:vertical;
 }
 
-.submit{
-    width:100%;
-    padding:14px;
-    border:0;
-    border-radius:8px;
-    background:#126b35;
-    color:white;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.submit:hover{
-    background:#0d5429;
-}
-
 .notice{
-    max-width:900px;
-    margin:35px auto 0;
-    padding:20px;
-    background:#fff5d5;
-    border-left:5px solid #e0ad25;
+    background:#fff8df;
+    border-left:5px solid #e5a900;
+    padding:15px;
+    margin-top:20px;
     border-radius:8px;
 }
 
 .contact{
-    background:#126b35;
-    color:white;
+    background:#eaf5ed;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
     text-align:center;
-}
-
-.contact .title{
-    color:white;
-}
-
-.whatsapp{
-    display:inline-block;
-    margin-top:20px;
-    padding:13px 25px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
+    background:white;
+    padding:30px;
+    border-radius:15px;
 }
 
 footer{
-    background:#093c20;
+    background:#123d27;
     color:white;
     text-align:center;
-    padding:22px;
+    padding:25px 15px;
 }
 
-.back-top{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    border:none;
-    background:#126b35;
-    color:white;
-    font-size:20px;
-    cursor:pointer;
+.mobile-menu{
     display:none;
 }
 
-@media(max-width:750px){
+@media(max-width:700px){
 
     header{
-        flex-direction:column;
-        gap:12px;
+        padding:14px 18px;
     }
 
     nav{
-        text-align:center;
+        display:none;
     }
 
-    nav a{
-        margin:0 5px;
-        font-size:13px;
+    .mobile-menu{
+        display:block;
+        font-size:25px;
+        cursor:pointer;
+    }
+
+    nav.show{
+        display:block;
+        position:absolute;
+        top:60px;
+        left:0;
+        right:0;
+        background:#176b3a;
+        padding:15px;
+    }
+
+    nav.show a{
+        display:block;
+        margin:12px;
     }
 
     .hero{
-        min-height:450px;
+        padding:55px 18px;
     }
 
     .hero h1{
-        font-size:35px;
+        font-size:31px;
     }
 
     .hero p{
-        font-size:17px;
+        font-size:16px;
     }
 
     section{
-        padding:45px 5%;
+        padding:40px 18px;
     }
 
-    .title{
-        font-size:27px;
+    .search-row{
+        grid-template-columns:1fr;
     }
 }
 </style>
@@ -343,626 +329,477 @@ footer{
 
 <header>
 
-<div class="logo">🌾 Shetimitra</div>
+<div class="logo">🌾 शेती कामगार सेवा केंद्र</div>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#tools">अवजारे</a>
-<a href="#crops">पिके</a>
-<a href="#disease">रोग/कीड</a>
+<div class="mobile-menu" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+<a href="#home">मुख्यपृष्ठ</a>
+<a href="#works">शेतातील कामे</a>
+<a href="#workers">कामगार शोधा</a>
+<a href="#service">आमची सेवा</a>
 <a href="#register">नोंदणी</a>
+<a href="#contact">संपर्क</a>
 </nav>
 
 </header>
 
 
-<!-- HOME -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
-<div class="hero-content">
-
-<h1>🌾 शेतकरी मित्र</h1>
+<h1>शेती कामगार सेवा केंद्र</h1>
 
 <p>
-शेतकऱ्यांसाठी शेतीची अवजारे, पिकांची माहिती,
-कीड व रोग व्यवस्थापन आणि शेतीविषयक उपयुक्त माहिती
-एकाच ठिकाणी.
+शेतीच्या कामासाठी आवश्यक कामगार आता आपल्या गावाजवळ उपलब्ध करून देण्याचा आमचा प्रयत्न.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#crops" class="primary">
-🌱 पिकांची माहिती
+<a href="#service" class="btn btn-white">
+👨‍🌾 कामगार मागणी करा
 </a>
 
-<a href="#tools" class="secondary">
-🚜 अवजारे पहा
+<a href="#register" class="btn btn-white">
+👷 कामगार म्हणून नोंदणी करा
 </a>
-
-</div>
 
 </div>
 
 </section>
 
 
-<!-- SEARCH -->
+<!-- HOW IT WORKS -->
 
 <section>
 
-<h2 class="title">🔎 शेती माहिती शोधा</h2>
+<div class="section-title">
+<h2>ही सेवा कशी काम करते?</h2>
+<p>शेतकरी आणि कामगारांना सोप्या पद्धतीने जोडण्याचा प्रयत्न</p>
+</div>
 
-<div class="search">
+<div class="cards">
+
+<div class="card">
+<div class="icon">📝</div>
+<h3>1. कामाची मागणी करा</h3>
+<p>आपल्याला कोणते काम आणि किती कामगार पाहिजेत ते कळवा.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔎</div>
+<h3>2. कामगार शोधा</h3>
+<p>गाव आणि कामाच्या प्रकारानुसार उपलब्ध कामगारांची माहिती शोधा.</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>3. कामगार उपलब्ध</h3>
+<p>गरजेनुसार उपलब्ध कामगारांशी संपर्क साधण्याची सुविधा.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FARM WORKS -->
+
+<section id="works">
+
+<div class="section-title">
+<h2>🌾 शेतातील विविध कामे</h2>
+<p>शेतीमध्ये आवश्यक असलेल्या विविध कामांसाठी कामगार उपलब्ध करण्याचा प्रयत्न</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🌱</div>
+<h3>पेरणी</h3>
+<p>बियाणे पेरणी व संबंधित शेती कामांसाठी कामगार.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌿</div>
+<h3>निंदणी / खुरपणी</h3>
+<p>शेतातील तण काढणे व पिकाची स्वच्छता करण्यासाठी कामगार.</p>
+</div>
+
+<div class="card">
+<div class="icon">💧</div>
+<h3>फवारणी</h3>
+<p>शेतीतील फवारणीसाठी आवश्यक कामगार.</p>
+</div>
+
+<div class="card">
+<div class="icon">🧺</div>
+<h3>कापूस वेचणी</h3>
+<p>कापूस वेचणीच्या हंगामात अतिरिक्त कामगारांची गरज असल्यास सेवा.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌾</div>
+<h3>कापणी</h3>
+<p>विविध पिकांच्या कापणीसाठी कामगार.</p>
+</div>
+
+<div class="card">
+<div class="icon">🧅</div>
+<h3>कांदा लागवड / काढणी</h3>
+<p>कांदा लागवड व काढणीसाठी कामगार.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌿</div>
+<h3>ऊस लागवड / तोडणी</h3>
+<p>ऊस लागवड आणि तोडणीसाठी कामगार.</p>
+</div>
+
+<div class="card">
+<div class="icon">🚜</div>
+<h3>इतर शेती कामे</h3>
+<p>शेतकऱ्याच्या गरजेनुसार इतर शेती कामांसाठी कामगार.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WORKER REQUIREMENT -->
+
+<section>
+
+<div class="section-title">
+<h2>👥 कोणत्या कामासाठी किती कामगार?</h2>
+<p>कामाचे प्रमाण, शेताचे क्षेत्र आणि परिस्थितीनुसार कामगारांची संख्या बदलू शकते.</p>
+</div>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>शेतीचे काम</th>
+<th>अंदाजे कामगार</th>
+<th>कामाची वेळ</th>
+</tr>
+
+<tr>
+<td>निंदणी / खुरपणी</td>
+<td>5 – 10</td>
+<td>गरजेनुसार</td>
+</tr>
+
+<tr>
+<td>कापूस वेचणी</td>
+<td>10 – 20</td>
+<td>हंगामानुसार</td>
+</tr>
+
+<tr>
+<td>कांदा लागवड</td>
+<td>8 – 15</td>
+<td>लागवडीच्या वेळी</td>
+</tr>
+
+<tr>
+<td>कांदा काढणी</td>
+<td>8 – 15</td>
+<td>काढणीच्या वेळी</td>
+</tr>
+
+<tr>
+<td>कापणी</td>
+<td>5 – 15</td>
+<td>पीक तयार झाल्यावर</td>
+</tr>
+
+<tr>
+<td>ऊस लागवड</td>
+<td>8 – 15</td>
+<td>लागवडीच्या वेळी</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- WORKER SEARCH -->
+
+<section id="workers">
+
+<div class="section-title">
+<h2>🔎 कामगार शोधा</h2>
+<p>आपल्या गावाजवळील उपलब्ध कामगार शोधा.</p>
+</div>
+
+<div class="search-box">
+
+<div class="search-row">
 
 <input
 type="text"
-id="searchBox"
-placeholder="कापूस, सोयाबीन, नांगर, मावा..."
-onkeyup="searchData()">
+id="searchName"
+placeholder="कामगाराचे नाव शोधा">
+
+<select id="searchWork">
+<option value="">कामाचा प्रकार निवडा</option>
+<option>निंदणी / खुरपणी</option>
+<option>कापूस वेचणी</option>
+<option>कांदा लागवड</option>
+<option>कांदा काढणी</option>
+<option>कापणी</option>
+<option>ऊस लागवड</option>
+<option>फवारणी</option>
+</select>
 
 </div>
-
-</section>
-
-
-<!-- TOOLS -->
-
-<section id="tools">
-
-<h2 class="title">🚜 शेतीसाठी लागणारी अवजारे</h2>
-
-<div class="cards">
-
-<div class="card searchable">
-
-<div class="card-icon">🚜</div>
-
-<h3>ट्रॅक्टर</h3>
-
-<p>
-शेतीची मशागत, नांगरणी, पेरणी,
-वाहतूक आणि विविध कृषी उपकरणे
-चालवण्यासाठी वापरले जाते.
-</p>
-
-<div class="details">
-<strong>उपयोग:</strong><br>
-नांगरणी, पेरणी, वाहतूक व मशागत
-</div>
-
-<span class="badge">शेती यंत्र</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">⚙️</div>
-
-<h3>रोटाव्हेटर</h3>
-
-<p>
-जमिनीतील ढेकळे फोडून जमीन
-भुसभुशीत करण्यासाठी उपयोगी.
-</p>
-
-<div class="details">
-<strong>उपयोग:</strong><br>
-जमीन तयार करणे व मशागत
-</div>
-
-<span class="badge">मशागत</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🌱</div>
-
-<h3>नांगर</h3>
-
-<p>
-जमीन उलटण्यासाठी आणि प्राथमिक
-मशागतीसाठी वापरले जाणारे अवजार.
-</p>
-
-<div class="details">
-<strong>उपयोग:</strong><br>
-जमीन नांगरणी
-</div>
-
-<span class="badge">जमीन तयारी</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🌾</div>
-
-<h3>पेरणी यंत्र</h3>
-
-<p>
-बियाणे योग्य अंतरावर आणि योग्य
-खोलीवर पेरण्यासाठी उपयोगी.
-</p>
-
-<div class="details">
-<strong>उपयोग:</strong><br>
-बियाणे पेरणी
-</div>
-
-<span class="badge">पेरणी</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">💦</div>
-
-<h3>फवारणी पंप</h3>
-
-<p>
-पिकांवर कृषी द्रावणांची फवारणी
-करण्यासाठी वापरला जातो.
-</p>
-
-<div class="details">
-<strong>उपयोग:</strong><br>
-कीड व रोग व्यवस्थापनासाठी फवारणी
-</div>
-
-<span class="badge">फवारणी</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🌿</div>
-
-<h3>कोळपे</h3>
-
-<p>
-पिकांच्या ओळींमधील तण काढण्यासाठी
-उपयोगी शेती अवजार.
-</p>
-
-<div class="details">
-<strong>उपयोग:</strong><br>
-तण नियंत्रण
-</div>
-
-<span class="badge">तण नियंत्रण</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CROPS -->
-
-<section id="crops" class="green-section">
-
-<h2 class="title">🌱 प्रमुख पिकांची माहिती</h2>
-
-<div class="cards">
-
-<div class="card searchable">
-
-<div class="card-icon">🌿</div>
-
-<h3>कापूस</h3>
-
-<p>
-कापूस हे महत्त्वाचे नगदी पीक आहे.
-योग्य जमीन, पाणी आणि कीड व्यवस्थापन
-महत्त्वाचे आहे.
-</p>
-
-<div class="details">
-<strong>महत्त्वाचे:</strong><br>
-जमीन तयारी → पेरणी → खत व्यवस्थापन →
-पाणी व्यवस्थापन → कीड निरीक्षण → काढणी
-</div>
-
-<span class="badge">नगदी पीक</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🫘</div>
-
-<h3>सोयाबीन</h3>
-
-<p>
-सोयाबीन हे महत्त्वाचे तेलबिया पीक आहे.
-प्रमाणित बियाणे आणि योग्य व्यवस्थापन
-आवश्यक आहे.
-</p>
-
-<div class="details">
-<strong>महत्त्वाचे:</strong><br>
-निचरा चांगली जमीन आणि योग्य पाणी व्यवस्थापन
-</div>
-
-<span class="badge">खरीप पीक</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🌽</div>
-
-<h3>मका</h3>
-
-<p>
-मका हे अन्न, पशुखाद्य आणि औद्योगिक
-वापरासाठी महत्त्वाचे पीक आहे.
-</p>
-
-<div class="details">
-<strong>महत्त्वाचे:</strong><br>
-योग्य पेरणी, खत व्यवस्थापन व पाणी व्यवस्थापन
-</div>
-
-<span class="badge">धान्य पीक</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🌾</div>
-
-<h3>गहू</h3>
-
-<p>
-गहू हे प्रमुख रब्बी पीक आहे.
-योग्य वेळी पेरणी आणि पाणी व्यवस्थापन
-उत्पादनासाठी महत्त्वाचे आहे.
-</p>
-
-<div class="details">
-<strong>महत्त्वाचे:</strong><br>
-पेरणी → सिंचन → खत व्यवस्थापन → काढणी
-</div>
-
-<span class="badge">रब्बी पीक</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🌱</div>
-
-<h3>हरभरा</h3>
-
-<p>
-हरभरा हे महत्त्वाचे कडधान्य पीक आहे.
-संतुलित खत व्यवस्थापन आणि नियमित निरीक्षण
-उपयुक्त ठरते.
-</p>
-
-<span class="badge">कडधान्य</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🧅</div>
-
-<h3>कांदा</h3>
-
-<p>
-कांदा पिकासाठी चांगला निचरा,
-योग्य पाणी व्यवस्थापन आणि नियमित
-निरीक्षण आवश्यक आहे.
-</p>
-
-<span class="badge">भाजीपाला</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🌾</div>
-
-<h3>ज्वारी</h3>
-
-<p>
-ज्वारी हे महत्त्वाचे धान्य व पशुखाद्य
-पीक आहे.
-</p>
-
-<span class="badge">धान्य पीक</span>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🎋</div>
-
-<h3>ऊस</h3>
-
-<p>
-ऊस हे दीर्घ कालावधीचे नगदी पीक असून
-पाणी, खत आणि कीड व्यवस्थापन महत्त्वाचे आहे.
-</p>
-
-<span class="badge">नगदी पीक</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- DISEASE -->
-
-<section id="disease">
-
-<h2 class="title">🐛 कीड व रोग व्यवस्थापन</h2>
-
-<div class="cards">
-
-<div class="card searchable">
-
-<div class="card-icon">🐛</div>
-
-<h3>पाने खाणाऱ्या अळ्या</h3>
-
-<p>
-पानांवर छिद्रे किंवा पाने खाल्लेली
-दिसू शकतात.
-</p>
-
-<div class="details">
-<strong>उपाय:</strong><br>
-पिकाची नियमित पाहणी करा. प्रादुर्भाव
-जास्त असल्यास कृषी तज्ज्ञांचा सल्ला घ्या.
-</div>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🦟</div>
-
-<h3>मावा</h3>
-
-<p>
-कोवळ्या पानांवर व फांद्यांवर लहान
-कीटक आढळू शकतात.
-</p>
-
-<div class="details">
-<strong>उपाय:</strong><br>
-नियमित निरीक्षण करा व योग्य
-व्यवस्थापन पद्धती वापरा.
-</div>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🍂</div>
-
-<h3>बुरशीजन्य रोग</h3>
-
-<p>
-पानांवर डाग, कुज किंवा बुरशीची
-लक्षणे दिसू शकतात.
-</p>
-
-<div class="details">
-<strong>उपाय:</strong><br>
-रोगाची योग्य ओळख करूनच उपचार करावेत.
-</div>
-
-</div>
-
-
-<div class="card searchable">
-
-<div class="card-icon">🌿</div>
-
-<h3>तण</h3>
-
-<p>
-तणामुळे पिकांशी पाणी, अन्नद्रव्ये
-आणि सूर्यप्रकाशासाठी स्पर्धा होते.
-</p>
-
-<div class="details">
-<strong>उपाय:</strong><br>
-योग्य वेळी तण नियंत्रण करणे महत्त्वाचे.
-</div>
-
-</div>
-
-</div>
-
-
-<div class="notice">
-
-<strong>⚠️ औषध वापराची महत्त्वाची सूचना</strong>
-
-<p>
-कोणतेही कृषी औषध वापरण्यापूर्वी त्याचे
-लेबल, पिकाचे नाव आणि वापराच्या सूचना
-काळजीपूर्वक तपासा. औषधाची मात्रा स्वतःहून
-बदलू नका. आवश्यक असल्यास कृषी अधिकारी
-किंवा कृषी तज्ज्ञांचा सल्ला घ्या.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="green-section services">
-
-<h2 class="title">📋 आमच्या सेवा</h2>
-
-<div class="cards">
-
-<div class="card service-card">
-
-<div class="card-icon">🌱</div>
-
-<h3>पिकांची माहिती</h3>
-
-<p>
-विविध पिकांची लागवड आणि
-व्यवस्थापनाची माहिती.
-</p>
-
-</div>
-
-
-<div class="card service-card">
-
-<div class="card-icon">🚜</div>
-
-<h3>अवजारांची माहिती</h3>
-
-<p>
-शेतीसाठी आवश्यक यंत्रे व
-अवजारांचा उपयोग.
-</p>
-
-</div>
-
-
-<div class="card service-card">
-
-<div class="card-icon">🐛</div>
-
-<h3>कीड व रोग</h3>
-
-<p>
-पिकांवरील सामान्य कीड व
-रोगांची प्राथमिक माहिती.
-</p>
-
-</div>
-
-
-<div class="card service-card">
-
-<div class="card-icon">👨‍🌾</div>
-
-<h3>शेतकरी मार्गदर्शन</h3>
-
-<p>
-शेतीविषयक उपयुक्त माहिती
-एकाच ठिकाणी.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- REGISTRATION -->
-
-<section id="register" class="registration">
-
-<h2 class="title">📝 शेतकरी नोंदणी</h2>
-
-<div class="form">
-
-<div class="form-group">
-
-<label>शेतकऱ्याचे नाव</label>
 
 <input
 type="text"
-id="farmerName"
-placeholder="तुमचे नाव लिहा">
-
-</div>
-
-
-<div class="form-group">
-
-<label>मोबाईल नंबर</label>
-
-<input
-type="tel"
-placeholder="मोबाईल नंबर">
-
-</div>
-
-
-<div class="form-group">
-
-<label>गाव</label>
-
-<input
-type="text"
+id="searchVillage"
 placeholder="गावाचे नाव">
 
 </div>
 
 
-<div class="form-group">
+<div class="cards" id="workerList">
 
-<label>मुख्य पीक</label>
+<div class="card worker"
+data-name="रमेश पाटील"
+data-work="निंदणी / खुरपणी,कापूस वेचणी,कापणी"
+data-village="कैगाव">
 
-<select>
+<span class="available">● उपलब्ध</span>
 
-<option>पीक निवडा</option>
-<option>कापूस</option>
-<option>सोयाबीन</option>
-<option>मका</option>
-<option>गहू</option>
-<option>हरभरा</option>
-<option>कांदा</option>
-<option>ज्वारी</option>
-<option>ऊस</option>
+<h3>👷 रमेश पाटील</h3>
+
+<div class="worker-info">
+<span>📍 गाव: कैगाव</span>
+<span>🛠️ कामे: निंदणी, कापूस वेचणी, कापणी</span>
+<span>👥 उपलब्ध कामगार: 5</span>
+</div>
+
+<a class="btn btn-green" href="tel:9876543210">
+📞 संपर्क करा
+</a>
+
+</div>
+
+
+<div class="card worker"
+data-name="सुरेश शिंदे"
+data-work="कांदा लागवड,कांदा काढणी,निंदणी / खुरपणी"
+data-village="सिल्लोड">
+
+<span class="available">● उपलब्ध</span>
+
+<h3>👷 सुरेश शिंदे</h3>
+
+<div class="worker-info">
+<span>📍 गाव: सिल्लोड</span>
+<span>🛠️ कामे: कांदा लागवड, कांदा काढणी, निंदणी</span>
+<span>👥 उपलब्ध कामगार: 8</span>
+</div>
+
+<a class="btn btn-green" href="tel:9876543211">
+📞 संपर्क करा
+</a>
+
+</div>
+
+
+<div class="card worker"
+data-name="महेश जाधव"
+data-work="कापणी,ऊस लागवड,फवारणी"
+data-village="औरंगाबाद">
+
+<span class="available">● उपलब्ध</span>
+
+<h3>👷 महेश जाधव</h3>
+
+<div class="worker-info">
+<span>📍 गाव: औरंगाबाद</span>
+<span>🛠️ कामे: कापणी, ऊस लागवड, फवारणी</span>
+<span>👥 उपलब्ध कामगार: 10</span>
+</div>
+
+<a class="btn btn-green" href="tel:9876543212">
+📞 संपर्क करा
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OUR SERVICE -->
+
+<section id="service" class="contact">
+
+<div class="section-title">
+<h2>🤝 आमची सेवा</h2>
+
+<p>
+आपल्याला शेतीच्या कामासाठी जेव्हा कामगारांची गरज असेल,
+तेव्हा आम्ही आपल्या गरजेनुसार कामगार उपलब्ध करून देण्याचा प्रयत्न करू.
+</p>
+
+</div>
+
+<div class="form-container form">
+
+<label>शेतकऱ्याचे नाव</label>
+<input type="text" id="farmerName" placeholder="आपले नाव">
+
+<label>मोबाईल नंबर</label>
+<input type="tel" id="farmerPhone" placeholder="मोबाईल नंबर">
+
+<label>गाव</label>
+<input type="text" id="farmerVillage" placeholder="गावाचे नाव">
+
+<label>कोणते काम आहे?</label>
+
+<select id="farmerWork">
+
+<option value="">काम निवडा</option>
+<option>पेरणी</option>
+<option>निंदणी / खुरपणी</option>
+<option>फवारणी</option>
+<option>कापूस वेचणी</option>
+<option>कापणी</option>
+<option>कांदा लागवड</option>
+<option>कांदा काढणी</option>
+<option>ऊस लागवड</option>
+<option>ऊस तोडणी</option>
+<option>इतर काम</option>
 
 </select>
 
+<label>किती कामगार पाहिजेत?</label>
+
+<input type="number" id="workerCount" placeholder="उदा. 10">
+
+<label>काम कधीपासून पाहिजे?</label>
+
+<input type="date" id="workDate">
+
+<label>अतिरिक्त माहिती</label>
+
+<textarea id="extraInfo"
+placeholder="कामाबद्दल अतिरिक्त माहिती लिहा"></textarea>
+
+<button class="btn btn-green" onclick="sendRequest()">
+📲 कामगारांची मागणी पाठवा
+</button>
+
+<div class="notice">
+⚠️ ही वेबसाइट EDP project साठी तयार केलेली demo website आहे.
+प्रत्यक्ष सेवेसाठी उपलब्ध कामगारांची माहिती केंद्राकडून तपासणे आवश्यक आहे.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WORKER REGISTRATION -->
+
+<section id="register">
+
+<div class="section-title">
+
+<h2>👷 कामगार म्हणून नोंदणी करा</h2>
+
+<p>
+आपल्याला शेतीतील कामे येत असल्यास आमच्या केंद्राशी जोडण्यासाठी नोंदणी करा.
+</p>
+
 </div>
 
 
-<div class="form-group">
+<div class="form-container form">
 
-<label>तुम्हाला कोणती माहिती हवी?</label>
+<label>कामगाराचे पूर्ण नाव</label>
 
-<textarea
-placeholder="तुमचा प्रश्न किंवा गरज लिहा..."></textarea>
+<input
+type="text"
+id="workerName"
+placeholder="पूर्ण नाव">
 
-</div>
+
+<label>मोबाईल नंबर</label>
+
+<input
+type="tel"
+id="workerPhone"
+placeholder="मोबाईल नंबर">
 
 
-<button
-class="submit"
-onclick="registerFarmer()">
+<label>गाव</label>
 
-नोंदणी करा
+<input
+type="text"
+id="workerVillage"
+placeholder="गावाचे नाव">
 
+
+<label>आपल्याला कोणती कामे येतात?</label>
+
+<select id="workerWork">
+
+<option value="">काम निवडा</option>
+<option>निंदणी / खुरपणी</option>
+<option>कापूस वेचणी</option>
+<option>कांदा लागवड</option>
+<option>कांदा काढणी</option>
+<option>कापणी</option>
+<option>ऊस लागवड</option>
+<option>ऊस तोडणी</option>
+<option>फवारणी</option>
+<option>पेरणी</option>
+<option>इतर</option>
+
+</select>
+
+
+<label>किती कामगारांचा गट आहे?</label>
+
+<input
+type="number"
+id="groupCount"
+placeholder="उदा. 5">
+
+
+<label>अनुभव</label>
+
+<input
+type="text"
+id="experience"
+placeholder="उदा. 5 वर्षे">
+
+
+<label>उपलब्धता</label>
+
+<select id="availability">
+
+<option>गरजेनुसार उपलब्ध</option>
+<option>सकाळी</option>
+<option>दुपारी</option>
+<option>पूर्ण दिवस</option>
+</select>
+
+
+<button class="btn btn-green" onclick="registerWorker()">
+✅ नोंदणी करा
 </button>
 
 </div>
@@ -972,27 +809,38 @@ onclick="registerFarmer()">
 
 <!-- CONTACT -->
 
-<section id="contact" class="contact">
+<section id="contact">
 
-<h2 class="title">📞 संपर्क</h2>
+<div class="section-title">
+<h2>📞 संपर्क</h2>
+</div>
 
-<p>
-शेतीविषयक माहिती आणि मार्गदर्शनासाठी
-आमच्याशी संपर्क करा.
-</p>
+<div class="contact-box">
+
+<h3>🌾 शेती कामगार सेवा केंद्र</h3>
+
+<p>शेतकरी आणि कामगारांना जोडण्यासाठी एक सेवा.</p>
+
+<br>
+
+<p>📍 कार्यक्षेत्र: आपल्या गावाच्या परिसरात</p>
+
+<p>📞 मोबाईल: 98XXXXXXXX</p>
+
+<p>📧 Email: shetkamgar@example.com</p>
+
+<br>
 
 <a
-href="https://wa.me/91XXXXXXXXXX"
-target="_blank"
-class="whatsapp">
+href="https://wa.me/919800000000"
+class="btn btn-green"
+target="_blank">
 
 💬 WhatsApp वर संपर्क करा
 
 </a>
 
-<p style="margin-top:20px;">
-📍 तुमचे गाव, तालुका, जिल्हा
-</p>
+</div>
 
 </section>
 
@@ -1001,111 +849,173 @@ class="whatsapp">
 
 <footer>
 
-<p>© 2026 Shetimitra | शेतकरी मित्र</p>
+<p>© 2026 शेती कामगार सेवा केंद्र</p>
 
-<p>
-शेतकऱ्यांसाठी माहिती आणि मार्गदर्शन
-</p>
+<p>EDP Project | Farmer & Agricultural Worker Service</p>
 
 </footer>
 
 
-<!-- BACK TO TOP -->
-
-<button
-class="back-top"
-id="topButton"
-onclick="topFunction()">
-
-↑
-
-</button>
-
-
 <script>
 
-/* SEARCH */
+/* MOBILE MENU */
 
-function searchData(){
+function toggleMenu(){
 
-let input =
-document.getElementById("searchBox")
-.value
-.toLowerCase();
-
-let cards =
-document.querySelectorAll(".searchable");
-
-cards.forEach(function(card){
-
-let text =
-card.innerText.toLowerCase();
-
-if(text.includes(input)){
-card.style.display="block";
-}
-else{
-card.style.display="none";
-}
-
-});
+    document.getElementById("nav").classList.toggle("show");
 
 }
 
 
-/* REGISTRATION */
+/* WORKER SEARCH */
 
-function registerFarmer(){
+const searchName =
+document.getElementById("searchName");
 
-let name =
-document.getElementById("farmerName").value;
+const searchVillage =
+document.getElementById("searchVillage");
 
-if(name.trim()===""){
+const searchWork =
+document.getElementById("searchWork");
 
-alert("कृपया तुमचे नाव लिहा.");
+function searchWorkers(){
 
-return;
+    let name =
+    searchName.value.toLowerCase();
+
+    let village =
+    searchVillage.value.toLowerCase();
+
+    let work =
+    searchWork.value.toLowerCase();
+
+    document
+    .querySelectorAll(".worker")
+    .forEach(function(worker){
+
+        let workerName =
+        worker.dataset.name.toLowerCase();
+
+        let workerVillage =
+        worker.dataset.village.toLowerCase();
+
+        let workerWork =
+        worker.dataset.work.toLowerCase();
+
+        let matchName =
+        workerName.includes(name);
+
+        let matchVillage =
+        workerVillage.includes(village);
+
+        let matchWork =
+        work === "" ||
+        workerWork.includes(work);
+
+        if(
+            matchName &&
+            matchVillage &&
+            matchWork
+        ){
+
+            worker.style.display="block";
+
+        }else{
+
+            worker.style.display="none";
+
+        }
+
+    });
 
 }
 
-alert(
-"धन्यवाद " +
-name +
-"! तुमची नोंदणी यशस्वी झाली आहे."
-);
+searchName.addEventListener("input",searchWorkers);
+
+searchVillage.addEventListener("input",searchWorkers);
+
+searchWork.addEventListener("change",searchWorkers);
+
+
+/* FARMER REQUEST */
+
+function sendRequest(){
+
+    let name =
+    document.getElementById("farmerName").value;
+
+    let phone =
+    document.getElementById("farmerPhone").value;
+
+    let village =
+    document.getElementById("farmerVillage").value;
+
+    let work =
+    document.getElementById("farmerWork").value;
+
+    let count =
+    document.getElementById("workerCount").value;
+
+    if(
+        name === "" ||
+        phone === "" ||
+        village === "" ||
+        work === "" ||
+        count === ""
+    ){
+
+        alert("कृपया सर्व आवश्यक माहिती भरा.");
+
+        return;
+
+    }
+
+    alert(
+        "आपली कामगार मागणी नोंदवली गेली आहे.\n\n" +
+        "नाव: " + name +
+        "\nगाव: " + village +
+        "\nकाम: " + work +
+        "\nकामगार: " + count
+    );
 
 }
 
 
-/* TOP BUTTON */
+/* WORKER REGISTRATION */
 
-window.onscroll=function(){
+function registerWorker(){
 
-let button =
-document.getElementById("topButton");
+    let name =
+    document.getElementById("workerName").value;
 
-if(
-document.body.scrollTop > 300 ||
-document.documentElement.scrollTop > 300
-){
+    let phone =
+    document.getElementById("workerPhone").value;
 
-button.style.display="block";
+    let village =
+    document.getElementById("workerVillage").value;
 
-}else{
+    let work =
+    document.getElementById("workerWork").value;
 
-button.style.display="none";
+    if(
+        name === "" ||
+        phone === "" ||
+        village === "" ||
+        work === ""
+    ){
 
-}
+        alert("कृपया सर्व आवश्यक माहिती भरा.");
 
-};
+        return;
 
+    }
 
-function topFunction(){
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+    alert(
+        "कामगार नोंदणी यशस्वी!\n\n" +
+        "नाव: " + name +
+        "\nगाव: " + village +
+        "\nकाम: " + work
+    );
 
 }
 
