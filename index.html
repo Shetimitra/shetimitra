@@ -7,11 +7,16 @@
 <title>शेती कामगार सेवा केंद्र</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, "Noto Sans Devanagari", sans-serif;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -19,6 +24,8 @@ body{
     color:#26332a;
     line-height:1.6;
 }
+
+/* HEADER */
 
 header{
     background:#176b3a;
@@ -33,14 +40,14 @@ header{
 }
 
 .logo{
-    font-size:22px;
+    font-size:21px;
     font-weight:bold;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:20px;
+    margin-left:18px;
     font-size:15px;
 }
 
@@ -48,11 +55,19 @@ nav a:hover{
     text-decoration:underline;
 }
 
+.mobile-menu{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* HERO */
+
 .hero{
     background:linear-gradient(135deg,#176b3a,#2d914f);
     color:white;
     text-align:center;
-    padding:75px 20px;
+    padding:80px 20px;
 }
 
 .hero h1{
@@ -67,18 +82,19 @@ nav a:hover{
 }
 
 .hero-buttons{
-    margin-top:30px;
+    margin-top:28px;
 }
 
 .btn{
     display:inline-block;
     padding:12px 22px;
-    margin:6px;
+    margin:5px;
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
     cursor:pointer;
     border:none;
+    font-size:15px;
 }
 
 .btn-white{
@@ -90,6 +106,13 @@ nav a:hover{
     background:#176b3a;
     color:white;
 }
+
+.btn-orange{
+    background:#e78b18;
+    color:white;
+}
+
+/* SECTION */
 
 section{
     padding:55px 6%;
@@ -109,6 +132,8 @@ section{
     color:#666;
     margin-top:7px;
 }
+
+/* CARDS */
 
 .cards{
     display:grid;
@@ -142,6 +167,109 @@ section{
     color:#666;
 }
 
+/* PRICE */
+
+.price-card{
+    text-align:center;
+    border-top:5px solid #176b3a;
+}
+
+.price{
+    font-size:28px;
+    font-weight:bold;
+    color:#176b3a;
+    margin:10px 0;
+}
+
+.split{
+    display:flex;
+    gap:8px;
+    margin-top:12px;
+}
+
+.worker-share{
+    flex:1;
+    background:#e8f6ec;
+    padding:8px;
+    border-radius:7px;
+    color:#176b3a;
+}
+
+.center-share{
+    flex:1;
+    background:#fff2dc;
+    padding:8px;
+    border-radius:7px;
+    color:#a45c00;
+}
+
+/* CALCULATOR */
+
+.calculator{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 4px 15px rgba(0,0,0,.09);
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.result{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.result-box{
+    padding:20px;
+    text-align:center;
+    border-radius:12px;
+}
+
+.total{
+    background:#eaf3ff;
+}
+
+.worker-money{
+    background:#e8f6ec;
+}
+
+.center-money{
+    background:#fff2dc;
+}
+
+.result-box h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.result-box strong{
+    font-size:25px;
+}
+
+/* SEARCH */
+
 .search-box{
     max-width:850px;
     margin:0 auto 30px;
@@ -151,23 +279,20 @@ section{
     box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
-.search-box input,
-.search-box select,
-.form input,
-.form select,
-.form textarea{
-    width:100%;
-    padding:13px;
-    margin:7px 0;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:15px;
-}
-
 .search-row{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:12px;
+}
+
+.search-box input,
+.search-box select{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    margin:5px 0;
 }
 
 .worker{
@@ -193,6 +318,8 @@ section{
     margin:3px 0;
 }
 
+/* TABLE */
+
 .table-container{
     overflow-x:auto;
 }
@@ -217,6 +344,39 @@ th{
     color:white;
 }
 
+/* BUSINESS */
+
+.business{
+    background:#eaf5ed;
+}
+
+.business-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.business-box h3{
+    color:#176b3a;
+    margin-bottom:12px;
+}
+
+.business-example{
+    background:#f5f8f4;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.business-example p{
+    margin:6px 0;
+}
+
+/* FORM */
+
 .form-container{
     max-width:750px;
     margin:auto;
@@ -229,7 +389,18 @@ th{
 .form label{
     font-weight:bold;
     display:block;
-    margin-top:8px;
+    margin-top:10px;
+}
+
+.form input,
+.form select,
+.form textarea{
+    width:100%;
+    padding:13px;
+    margin:6px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
 }
 
 .form textarea{
@@ -245,6 +416,8 @@ th{
     border-radius:8px;
 }
 
+/* CONTACT */
+
 .contact{
     background:#eaf5ed;
 }
@@ -258,6 +431,8 @@ th{
     border-radius:15px;
 }
 
+/* FOOTER */
+
 footer{
     background:#123d27;
     color:white;
@@ -265,9 +440,7 @@ footer{
     padding:25px 15px;
 }
 
-.mobile-menu{
-    display:none;
-}
+/* MOBILE */
 
 @media(max-width:700px){
 
@@ -281,8 +454,6 @@ footer{
 
     .mobile-menu{
         display:block;
-        font-size:25px;
-        cursor:pointer;
     }
 
     nav.show{
@@ -319,27 +490,43 @@ footer{
     .search-row{
         grid-template-columns:1fr;
     }
+
+    .result{
+        grid-template-columns:1fr;
+    }
+
+    .split{
+        flex-direction:column;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
+
 <!-- HEADER -->
 
 <header>
 
-<div class="logo">🌾 शेती कामगार सेवा केंद्र</div>
+<div class="logo">
+🌾 शेती कामगार सेवा केंद्र
+</div>
 
 <div class="mobile-menu" onclick="toggleMenu()">☰</div>
 
 <nav id="nav">
+
 <a href="#home">मुख्यपृष्ठ</a>
 <a href="#works">शेतातील कामे</a>
-<a href="#workers">कामगार शोधा</a>
+<a href="#rates">दर</a>
+<a href="#calculator">Income Calculator</a>
+<a href="#workers">कामगार</a>
 <a href="#service">आमची सेवा</a>
 <a href="#register">नोंदणी</a>
-<a href="#contact">संपर्क</a>
+
 </nav>
 
 </header>
@@ -349,10 +536,10 @@ footer{
 
 <section class="hero" id="home">
 
-<h1>शेती कामगार सेवा केंद्र</h1>
+<h1>🌾 शेती कामगार सेवा केंद्र</h1>
 
 <p>
-शेतीच्या कामासाठी आवश्यक कामगार आता आपल्या गावाजवळ उपलब्ध करून देण्याचा आमचा प्रयत्न.
+शेतीच्या कामासाठी आवश्यक कामगार आपल्या गरजेच्या वेळी उपलब्ध करून देण्याचा आमचा प्रयत्न.
 </p>
 
 <div class="hero-buttons">
@@ -375,28 +562,67 @@ footer{
 <section>
 
 <div class="section-title">
-<h2>ही सेवा कशी काम करते?</h2>
-<p>शेतकरी आणि कामगारांना सोप्या पद्धतीने जोडण्याचा प्रयत्न</p>
+
+<h2>आमची सेवा कशी काम करते?</h2>
+
+<p>
+शेतकरी आणि शेती कामगार यांना एका सेवेद्वारे जोडण्याचा प्रयत्न.
+</p>
+
 </div>
+
 
 <div class="cards">
 
 <div class="card">
+
 <div class="icon">📝</div>
-<h3>1. कामाची मागणी करा</h3>
-<p>आपल्याला कोणते काम आणि किती कामगार पाहिजेत ते कळवा.</p>
+
+<h3>1. कामाची मागणी</h3>
+
+<p>
+शेतकरी कोणते काम, किती कामगार आणि कोणत्या दिवशी पाहिजेत ते सांगतो.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <div class="icon">🔎</div>
-<h3>2. कामगार शोधा</h3>
-<p>गाव आणि कामाच्या प्रकारानुसार उपलब्ध कामगारांची माहिती शोधा.</p>
+
+<h3>2. कामगार शोध</h3>
+
+<p>
+गाव आणि कामाच्या प्रकारानुसार उपलब्ध कामगार शोधले जातात.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <div class="icon">🤝</div>
+
 <h3>3. कामगार उपलब्ध</h3>
-<p>गरजेनुसार उपलब्ध कामगारांशी संपर्क साधण्याची सुविधा.</p>
+
+<p>
+शेतकऱ्याच्या गरजेनुसार उपलब्ध कामगारांशी संपर्क केला जातो.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💰</div>
+
+<h3>4. 25% Service Income</h3>
+
+<p>
+प्रत्येक कामगाराच्या मजुरीमधून 25% सेवा शुल्क केंद्राचे उत्पन्न म्हणून ठेवले जाते.
+</p>
+
 </div>
 
 </div>
@@ -409,58 +635,64 @@ footer{
 <section id="works">
 
 <div class="section-title">
+
 <h2>🌾 शेतातील विविध कामे</h2>
-<p>शेतीमध्ये आवश्यक असलेल्या विविध कामांसाठी कामगार उपलब्ध करण्याचा प्रयत्न</p>
+
+<p>
+विविध शेतीच्या कामांसाठी कामगार उपलब्ध करून देण्याची सेवा.
+</p>
+
 </div>
+
 
 <div class="cards">
 
 <div class="card">
 <div class="icon">🌱</div>
 <h3>पेरणी</h3>
-<p>बियाणे पेरणी व संबंधित शेती कामांसाठी कामगार.</p>
+<p>पेरणीच्या कामासाठी आवश्यक कामगार.</p>
 </div>
 
 <div class="card">
 <div class="icon">🌿</div>
 <h3>निंदणी / खुरपणी</h3>
-<p>शेतातील तण काढणे व पिकाची स्वच्छता करण्यासाठी कामगार.</p>
+<p>तण काढणे व शेत स्वच्छ करण्यासाठी कामगार.</p>
 </div>
 
 <div class="card">
 <div class="icon">💧</div>
 <h3>फवारणी</h3>
-<p>शेतीतील फवारणीसाठी आवश्यक कामगार.</p>
+<p>फवारणीच्या कामासाठी कामगार.</p>
 </div>
 
 <div class="card">
 <div class="icon">🧺</div>
 <h3>कापूस वेचणी</h3>
-<p>कापूस वेचणीच्या हंगामात अतिरिक्त कामगारांची गरज असल्यास सेवा.</p>
+<p>कापूस वेचणीच्या हंगामात कामगार.</p>
 </div>
 
 <div class="card">
 <div class="icon">🌾</div>
 <h3>कापणी</h3>
-<p>विविध पिकांच्या कापणीसाठी कामगार.</p>
+<p>पीक कापणीसाठी आवश्यक कामगार.</p>
 </div>
 
 <div class="card">
 <div class="icon">🧅</div>
-<h3>कांदा लागवड / काढणी</h3>
-<p>कांदा लागवड व काढणीसाठी कामगार.</p>
+<h3>कांदा लागवड</h3>
+<p>कांदा लागवडीसाठी कामगार.</p>
+</div>
+
+<div class="card">
+<div class="icon">🧅</div>
+<h3>कांदा काढणी</h3>
+<p>कांदा काढणीसाठी कामगार.</p>
 </div>
 
 <div class="card">
 <div class="icon">🌿</div>
 <h3>ऊस लागवड / तोडणी</h3>
-<p>ऊस लागवड आणि तोडणीसाठी कामगार.</p>
-</div>
-
-<div class="card">
-<div class="icon">🚜</div>
-<h3>इतर शेती कामे</h3>
-<p>शेतकऱ्याच्या गरजेनुसार इतर शेती कामांसाठी कामगार.</p>
+<p>ऊस लागवड व तोडणीसाठी कामगार.</p>
 </div>
 
 </div>
@@ -468,62 +700,388 @@ footer{
 </section>
 
 
-<!-- WORKER REQUIREMENT -->
+<!-- RATES -->
+
+<section id="rates">
+
+<div class="section-title">
+
+<h2>💰 शेती कामांचे दर</h2>
+
+<p>
+प्रत्येक कामासाठी उदाहरणार्थ दिवसाचा दर आणि 75% / 25% वाटा.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card price-card">
+
+<h3>निंदणी / खुरपणी</h3>
+
+<div class="price">₹600 / दिवस</div>
+
+<div class="split">
+
+<div class="worker-share">
+👷 75%<br>
+₹450
+</div>
+
+<div class="center-share">
+🌾 25%<br>
+₹150
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>कापूस वेचणी</h3>
+
+<div class="price">₹700 / दिवस</div>
+
+<div class="split">
+
+<div class="worker-share">
+👷 75%<br>
+₹525
+</div>
+
+<div class="center-share">
+🌾 25%<br>
+₹175
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>कांदा लागवड</h3>
+
+<div class="price">₹700 / दिवस</div>
+
+<div class="split">
+
+<div class="worker-share">
+👷 75%<br>
+₹525
+</div>
+
+<div class="center-share">
+🌾 25%<br>
+₹175
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>कांदा काढणी</h3>
+
+<div class="price">₹800 / दिवस</div>
+
+<div class="split">
+
+<div class="worker-share">
+👷 75%<br>
+₹600
+</div>
+
+<div class="center-share">
+🌾 25%<br>
+₹200
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>कापणी</h3>
+
+<div class="price">₹800 / दिवस</div>
+
+<div class="split">
+
+<div class="worker-share">
+👷 75%<br>
+₹600
+</div>
+
+<div class="center-share">
+🌾 25%<br>
+₹200
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>ऊस लागवड</h3>
+
+<div class="price">₹900 / दिवस</div>
+
+<div class="split">
+
+<div class="worker-share">
+👷 75%<br>
+₹675
+</div>
+
+<div class="center-share">
+🌾 25%<br>
+₹225
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>फवारणी</h3>
+
+<div class="price">₹700 / दिवस</div>
+
+<div class="split">
+
+<div class="worker-share">
+👷 75%<br>
+₹525
+</div>
+
+<div class="center-share">
+🌾 25%<br>
+₹175
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>पेरणी</h3>
+
+<div class="price">₹800 / दिवस</div>
+
+<div class="split">
+
+<div class="worker-share">
+👷 75%<br>
+₹600
+</div>
+
+<div class="center-share">
+🌾 25%<br>
+₹200
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="notice">
+
+⚠️ वरील दर हे EDP project साठी उदाहरणार्थ आहेत. प्रत्यक्ष मजुरीचे दर गाव, हंगाम, कामाचे स्वरूप आणि स्थानिक परिस्थितीनुसार बदलू शकतात.
+
+</div>
+
+</section>
+
+
+<!-- INCOME CALCULATOR -->
+
+<section id="calculator" class="business">
+
+<div class="section-title">
+
+<h2>🧮 Income Calculator</h2>
+
+<p>
+कामगारांची संख्या, दिवस आणि काम निवडा आणि एकूण रक्कम व 25% केंद्राचे उत्पन्न पहा.
+</p>
+
+</div>
+
+
+<div class="calculator">
+
+
+<div class="form-group">
+
+<label>🌾 कामाचा प्रकार</label>
+
+<select id="calcWork" onchange="calculateIncome()">
+
+<option value="600">निंदणी / खुरपणी — ₹600</option>
+
+<option value="700">कापूस वेचणी — ₹700</option>
+
+<option value="700">कांदा लागवड — ₹700</option>
+
+<option value="800">कांदा काढणी — ₹800</option>
+
+<option value="800">कापणी — ₹800</option>
+
+<option value="900">ऊस लागवड — ₹900</option>
+
+<option value="700">फवारणी — ₹700</option>
+
+<option value="800">पेरणी — ₹800</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>👷 किती कामगार?</label>
+
+<input
+type="number"
+id="calcWorkers"
+value="1"
+min="1"
+oninput="calculateIncome()">
+
+</div>
+
+
+<div class="form-group">
+
+<label>📅 किती दिवस?</label>
+
+<input
+type="number"
+id="calcDays"
+value="1"
+min="1"
+oninput="calculateIncome()">
+
+</div>
+
+
+<div class="result">
+
+
+<div class="result-box total">
+
+<h3>💰 एकूण मजुरी</h3>
+
+<strong id="totalAmount">₹600</strong>
+
+</div>
+
+
+<div class="result-box worker-money">
+
+<h3>👷 कामगारांना 75%</h3>
+
+<strong id="workerAmount">₹450</strong>
+
+</div>
+
+
+<div class="result-box center-money">
+
+<h3>🌾 केंद्राला 25%</h3>
+
+<strong id="centerAmount">₹150</strong>
+
+</div>
+
+</div>
+
+
+<div class="notice">
+
+<strong>उदाहरण:</strong>
+
+1 कामगार × 1 दिवस × ₹600 = ₹600
+
+<br>
+
+कामगाराचा हिस्सा = ₹450 (75%)
+
+<br>
+
+सेवा केंद्राचे उत्पन्न = ₹150 (25%)
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BUSINESS MODEL -->
 
 <section>
 
 <div class="section-title">
-<h2>👥 कोणत्या कामासाठी किती कामगार?</h2>
-<p>कामाचे प्रमाण, शेताचे क्षेत्र आणि परिस्थितीनुसार कामगारांची संख्या बदलू शकते.</p>
+
+<h2>💼 आमचे Business Model</h2>
+
+<p>
+शेती कामगार सेवा केंद्राचे उत्पन्न कसे मिळते?
+</p>
+
 </div>
 
-<div class="table-container">
 
-<table>
+<div class="business-box">
 
-<tr>
-<th>शेतीचे काम</th>
-<th>अंदाजे कामगार</th>
-<th>कामाची वेळ</th>
-</tr>
+<h3>25% Service Commission Model</h3>
 
-<tr>
-<td>निंदणी / खुरपणी</td>
-<td>5 – 10</td>
-<td>गरजेनुसार</td>
-</tr>
+<p>
+आमचे केंद्र शेतकऱ्यांना आवश्यक शेती कामगार उपलब्ध करून देण्याचे काम करेल.
+कामगाराला मिळणाऱ्या एकूण मजुरीपैकी 75% रक्कम कामगाराला आणि 25% सेवा शुल्क केंद्राला मिळेल.
+</p>
 
-<tr>
-<td>कापूस वेचणी</td>
-<td>10 – 20</td>
-<td>हंगामानुसार</td>
-</tr>
 
-<tr>
-<td>कांदा लागवड</td>
-<td>8 – 15</td>
-<td>लागवडीच्या वेळी</td>
-</tr>
+<div class="business-example">
 
-<tr>
-<td>कांदा काढणी</td>
-<td>8 – 15</td>
-<td>काढणीच्या वेळी</td>
-</tr>
+<h3>उदाहरण</h3>
 
-<tr>
-<td>कापणी</td>
-<td>5 – 15</td>
-<td>पीक तयार झाल्यावर</td>
-</tr>
+<p>👷 कामगार = 10</p>
 
-<tr>
-<td>ऊस लागवड</td>
-<td>8 – 15</td>
-<td>लागवडीच्या वेळी</td>
-</tr>
+<p>📅 दिवस = 2</p>
 
-</table>
+<p>💰 एका कामगाराचा दर = ₹800 / दिवस</p>
+
+<hr>
+
+<p>💰 एकूण मजुरी = <strong>₹16,000</strong></p>
+
+<p>👷 कामगारांचा 75% हिस्सा = <strong>₹12,000</strong></p>
+
+<p>🌾 केंद्राचे 25% उत्पन्न = <strong>₹4,000</strong></p>
+
+</div>
 
 </div>
 
@@ -535,9 +1093,15 @@ footer{
 <section id="workers">
 
 <div class="section-title">
+
 <h2>🔎 कामगार शोधा</h2>
-<p>आपल्या गावाजवळील उपलब्ध कामगार शोधा.</p>
+
+<p>
+गाव आणि कामानुसार उपलब्ध कामगार शोधा.
+</p>
+
 </div>
+
 
 <div class="search-box">
 
@@ -546,10 +1110,11 @@ footer{
 <input
 type="text"
 id="searchName"
-placeholder="कामगाराचे नाव शोधा">
+placeholder="कामगाराचे नाव">
 
 <select id="searchWork">
-<option value="">कामाचा प्रकार निवडा</option>
+
+<option value="">सर्व कामे</option>
 <option>निंदणी / खुरपणी</option>
 <option>कापूस वेचणी</option>
 <option>कांदा लागवड</option>
@@ -557,9 +1122,12 @@ placeholder="कामगाराचे नाव शोधा">
 <option>कापणी</option>
 <option>ऊस लागवड</option>
 <option>फवारणी</option>
+<option>पेरणी</option>
+
 </select>
 
 </div>
+
 
 <input
 type="text"
@@ -571,6 +1139,7 @@ placeholder="गावाचे नाव">
 
 <div class="cards" id="workerList">
 
+
 <div class="card worker"
 data-name="रमेश पाटील"
 data-work="निंदणी / खुरपणी,कापूस वेचणी,कापणी"
@@ -581,13 +1150,21 @@ data-village="कैगाव">
 <h3>👷 रमेश पाटील</h3>
 
 <div class="worker-info">
+
 <span>📍 गाव: कैगाव</span>
+
 <span>🛠️ कामे: निंदणी, कापूस वेचणी, कापणी</span>
+
 <span>👥 उपलब्ध कामगार: 5</span>
+
 </div>
 
-<a class="btn btn-green" href="tel:9876543210">
+<a
+href="tel:9876543210"
+class="btn btn-green">
+
 📞 संपर्क करा
+
 </a>
 
 </div>
@@ -603,13 +1180,21 @@ data-village="सिल्लोड">
 <h3>👷 सुरेश शिंदे</h3>
 
 <div class="worker-info">
+
 <span>📍 गाव: सिल्लोड</span>
+
 <span>🛠️ कामे: कांदा लागवड, कांदा काढणी, निंदणी</span>
+
 <span>👥 उपलब्ध कामगार: 8</span>
+
 </div>
 
-<a class="btn btn-green" href="tel:9876543211">
+<a
+href="tel:9876543211"
+class="btn btn-green">
+
 📞 संपर्क करा
+
 </a>
 
 </div>
@@ -625,52 +1210,79 @@ data-village="औरंगाबाद">
 <h3>👷 महेश जाधव</h3>
 
 <div class="worker-info">
+
 <span>📍 गाव: औरंगाबाद</span>
+
 <span>🛠️ कामे: कापणी, ऊस लागवड, फवारणी</span>
+
 <span>👥 उपलब्ध कामगार: 10</span>
+
 </div>
 
-<a class="btn btn-green" href="tel:9876543212">
+<a
+href="tel:9876543212"
+class="btn btn-green">
+
 📞 संपर्क करा
+
 </a>
 
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- OUR SERVICE -->
+<!-- FARMER SERVICE -->
 
-<section id="service" class="contact">
+<section id="service">
 
 <div class="section-title">
-<h2>🤝 आमची सेवा</h2>
+
+<h2>👨‍🌾 कामगारांची मागणी करा</h2>
 
 <p>
-आपल्याला शेतीच्या कामासाठी जेव्हा कामगारांची गरज असेल,
-तेव्हा आम्ही आपल्या गरजेनुसार कामगार उपलब्ध करून देण्याचा प्रयत्न करू.
+शेतीच्या कामासाठी तुम्हाला किती कामगार पाहिजेत ते कळवा.
 </p>
 
 </div>
 
+
 <div class="form-container form">
 
+
 <label>शेतकऱ्याचे नाव</label>
-<input type="text" id="farmerName" placeholder="आपले नाव">
+
+<input
+type="text"
+id="farmerName"
+placeholder="आपले नाव">
+
 
 <label>मोबाईल नंबर</label>
-<input type="tel" id="farmerPhone" placeholder="मोबाईल नंबर">
+
+<input
+type="tel"
+id="farmerPhone"
+placeholder="मोबाईल नंबर">
+
 
 <label>गाव</label>
-<input type="text" id="farmerVillage" placeholder="गावाचे नाव">
 
-<label>कोणते काम आहे?</label>
+<input
+type="text"
+id="farmerVillage"
+placeholder="गावाचे नाव">
+
+
+<label>कामाचा प्रकार</label>
 
 <select id="farmerWork">
 
 <option value="">काम निवडा</option>
+
 <option>पेरणी</option>
 <option>निंदणी / खुरपणी</option>
 <option>फवारणी</option>
@@ -680,30 +1292,47 @@ data-village="औरंगाबाद">
 <option>कांदा काढणी</option>
 <option>ऊस लागवड</option>
 <option>ऊस तोडणी</option>
-<option>इतर काम</option>
+<option>इतर</option>
 
 </select>
 
+
 <label>किती कामगार पाहिजेत?</label>
 
-<input type="number" id="workerCount" placeholder="उदा. 10">
+<input
+type="number"
+id="workerCount"
+min="1"
+placeholder="उदा. 10">
+
 
 <label>काम कधीपासून पाहिजे?</label>
 
-<input type="date" id="workDate">
+<input
+type="date"
+id="workDate">
+
 
 <label>अतिरिक्त माहिती</label>
 
-<textarea id="extraInfo"
-placeholder="कामाबद्दल अतिरिक्त माहिती लिहा"></textarea>
+<textarea
+id="extraInfo"
+placeholder="कामाबद्दल अतिरिक्त माहिती"></textarea>
 
-<button class="btn btn-green" onclick="sendRequest()">
+
+<button
+class="btn btn-green"
+onclick="sendRequest()">
+
 📲 कामगारांची मागणी पाठवा
+
 </button>
 
+
 <div class="notice">
-⚠️ ही वेबसाइट EDP project साठी तयार केलेली demo website आहे.
-प्रत्यक्ष सेवेसाठी उपलब्ध कामगारांची माहिती केंद्राकडून तपासणे आवश्यक आहे.
+
+ही EDP project साठी तयार केलेली demo website आहे.
+
 </div>
 
 </div>
@@ -720,62 +1349,8 @@ placeholder="कामाबद्दल अतिरिक्त माहि�
 <h2>👷 कामगार म्हणून नोंदणी करा</h2>
 
 <p>
-आपल्याला शेतीतील कामे येत असल्यास आमच्या केंद्राशी जोडण्यासाठी नोंदणी करा.
-</p>
-
-</div>
-
-
-<div class="form-container form">
-
-<label>कामगाराचे पूर्ण नाव</label>
-
-<input
-type="text"
-id="workerName"
-placeholder="पूर्ण नाव">
-
-
-<label>मोबाईल नंबर</label>
-
-<input
-type="tel"
-id="workerPhone"
-placeholder="मोबाईल नंबर">
-
-
-<label>गाव</label>
-
-<input
-type="text"
-id="workerVillage"
-placeholder="गावाचे नाव">
-
-
-<label>आपल्याला कोणती कामे येतात?</label>
-
-<select id="workerWork">
-
-<option value="">काम निवडा</option>
-<option>निंदणी / खुरपणी</option>
-<option>कापूस वेचणी</option>
-<option>कांदा लागवड</option>
-<option>कांदा काढणी</option>
-<option>कापणी</option>
-<option>ऊस लागवड</option>
-<option>ऊस तोडणी</option>
-<option>फवारणी</option>
-<option>पेरणी</option>
-<option>इतर</option>
-
-</select>
-
-
-<label>किती कामगारांचा गट आहे?</label>
-
-<input
-type="number"
-id="groupCount"
+शेतीतील कामे येत असल्यास आमच्या सेवेशी जोडण्यासाठी नोंदणी करा.
+min="1"
 placeholder="उदा. 5">
 
 
@@ -795,11 +1370,16 @@ placeholder="उदा. 5 वर्षे">
 <option>सकाळी</option>
 <option>दुपारी</option>
 <option>पूर्ण दिवस</option>
+
 </select>
 
 
-<button class="btn btn-green" onclick="registerWorker()">
+<button
+class="btn btn-green"
+onclick="registerWorker()">
+
 ✅ नोंदणी करा
+
 </button>
 
 </div>
@@ -809,17 +1389,22 @@ placeholder="उदा. 5 वर्षे">
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section id="contact" class="contact">
 
 <div class="section-title">
+
 <h2>📞 संपर्क</h2>
+
 </div>
+
 
 <div class="contact-box">
 
 <h3>🌾 शेती कामगार सेवा केंद्र</h3>
 
-<p>शेतकरी आणि कामगारांना जोडण्यासाठी एक सेवा.</p>
+<p>
+शेतकरी आणि शेती कामगारांना जोडण्यासाठी एक सेवा.
+</p>
 
 <br>
 
@@ -833,8 +1418,8 @@ placeholder="उदा. 5 वर्षे">
 
 <a
 href="https://wa.me/919800000000"
-class="btn btn-green"
-target="_blank">
+target="_blank"
+class="btn btn-green">
 
 💬 WhatsApp वर संपर्क करा
 
@@ -858,168 +1443,44 @@ target="_blank">
 
 <script>
 
+
 /* MOBILE MENU */
 
 function toggleMenu(){
 
-    document.getElementById("nav").classList.toggle("show");
+document
+.getElementById("nav")
+.classList.toggle("show");
 
 }
 
 
-/* WORKER SEARCH */
+/* INCOME CALCULATOR */
 
-const searchName =
-document.getElementById("searchName");
+function calculateIncome(){
 
-const searchVillage =
-document.getElementById("searchVillage");
+let rate =
+Number(document.getElementById("calcWork").value);
 
-const searchWork =
-document.getElementById("searchWork");
+let workers =
+Number(document.getElementById("calcWorkers").value);
 
-function searchWorkers(){
+let days =
+Number(document.getElementById("calcDays").value);
 
-    let name =
-    searchName.value.toLowerCase();
-
-    let village =
-    searchVillage.value.toLowerCase();
-
-    let work =
-    searchWork.value.toLowerCase();
-
-    document
-    .querySelectorAll(".worker")
-    .forEach(function(worker){
-
-        let workerName =
-        worker.dataset.name.toLowerCase();
-
-        let workerVillage =
-        worker.dataset.village.toLowerCase();
-
-        let workerWork =
-        worker.dataset.work.toLowerCase();
-
-        let matchName =
-        workerName.includes(name);
-
-        let matchVillage =
-        workerVillage.includes(village);
-
-        let matchWork =
-        work === "" ||
-        workerWork.includes(work);
-
-        if(
-            matchName &&
-            matchVillage &&
-            matchWork
-        ){
-
-            worker.style.display="block";
-
-        }else{
-
-            worker.style.display="none";
-
-        }
-
-    });
-
+if(workers < 1){
+workers = 1;
 }
 
-searchName.addEventListener("input",searchWorkers);
-
-searchVillage.addEventListener("input",searchWorkers);
-
-searchWork.addEventListener("change",searchWorkers);
-
-
-/* FARMER REQUEST */
-
-function sendRequest(){
-
-    let name =
-    document.getElementById("farmerName").value;
-
-    let phone =
-    document.getElementById("farmerPhone").value;
-
-    let village =
-    document.getElementById("farmerVillage").value;
-
-    let work =
-    document.getElementById("farmerWork").value;
-
-    let count =
-    document.getElementById("workerCount").value;
-
-    if(
-        name === "" ||
-        phone === "" ||
-        village === "" ||
-        work === "" ||
-        count === ""
-    ){
-
-        alert("कृपया सर्व आवश्यक माहिती भरा.");
-
-        return;
-
-    }
-
-    alert(
-        "आपली कामगार मागणी नोंदवली गेली आहे.\n\n" +
-        "नाव: " + name +
-        "\nगाव: " + village +
-        "\nकाम: " + work +
-        "\nकामगार: " + count
-    );
-
+if(days < 1){
+days = 1;
 }
 
+let total =
+rate * workers * days;
 
-/* WORKER REGISTRATION */
+let workerMoney =
+total * 0.75;
 
-function registerWorker(){
-
-    let name =
-    document.getElementById("workerName").value;
-
-    let phone =
-    document.getElementById("workerPhone").value;
-
-    let village =
-    document.getElementById("workerVillage").value;
-
-    let work =
-    document.getElementById("workerWork").value;
-
-    if(
-        name === "" ||
-        phone === "" ||
-        village === "" ||
-        work === ""
-    ){
-
-        alert("कृपया सर्व आवश्यक माहिती भरा.");
-
-        return;
-
-    }
-
-    alert(
-        "कामगार नोंदणी यशस्वी!\n\n" +
-        "नाव: " + name +
-        "\nगाव: " + village +
-        "\nकाम: " + work
-    );
-
-}
-
-</script>
-
-</body>
-</html>
+let centerMoney =
+total * 0.2
